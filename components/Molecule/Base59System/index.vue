@@ -7,9 +7,11 @@
       :class="$style.item"
     )
     div(:class="$style.hr")
-    div(:class="[$style.split2, $style.height7]" v-text="'split2'")
-    div(:class="[$style.split2, $style.height3]" v-text="'split2'")
-    div(:class="[$style.split2, $style.height3]" v-text="'split2'")
+    div(:class="$style.wrapper")
+      section(:class="[$style.section2col, $style.height7]")
+        div(:class="[$style.split2, $style.height7]" v-text="'split2'")
+        div(:class="[$style.split2, $style.height3]" v-text="'split2'")
+        div(:class="[$style.split2, $style.height3]" v-text="'split2'")
 </template>
 
 <script>
@@ -43,7 +45,6 @@ $_outerPadding: 15px
 .section
   display: flex
   flex-wrap: wrap
-  justify-content: space-between
   width: 100%
   max-width: $_width
   padding: $_outerPadding
@@ -64,6 +65,16 @@ $_outerPadding: 15px
     width: $_width
     height: $_itemSize
     background-color: colors('white')
+
+  .wrapper
+    flex: 1 1 100%
+
+.section2col
+  display: flex
+  flex-flow: column wrap
+  justify-content: space-between
+  align-content: space-between
+  width: 100%
 
   .split2
     @include _itemStyle()
