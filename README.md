@@ -1,22 +1,12 @@
-# VueBoilerplate
+# 59 Split Layout
 
-[![GitHub license](https://img.shields.io/badge/license-MIT-blue.svg?style=flat)](https://github.com/t--takai/VueBoilerplate/blob/master/LICENSE)
+## References
 
-> To Make Vue Components
+- [59分割ヤバイ｜深津 貴之 (fladdict)｜note](https://note.com/fladdict/n/n3f5820eee7bb)
 
 ## DEMO
 
-<https://t--takai.github.io/VueBoilerplate/>
-
-## Features
-
-- Can be developed OFFLINE after `$ yarn install`
-- Generate Static
-- Nuxt.js v2.5.0
-- Vuex
-- Storybook
-- template lang="pug"
-- style lang="sass"
+<https://t--takai.github.io/59-split-layout/>
 
 ## How to Develop
 
@@ -40,10 +30,3 @@ $ yarn generate
 # generate static project for GitHub Pages
 $ yarn generate:gh-pages
 ```
-
-## References
-
-- [Nuxt.js docs](https://ja.nuxtjs.org/)
-- [Vue.js Lifecycle Diagram](https://jp.vuejs.org/v2/guide/instance.html#ライフサイクルダイアグラム)
-- [Sass: sass:math](https://sass-lang.com/documentation/modules/math)
-- [Pug](https://pugjs.org/api/getting-started.html)

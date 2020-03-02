@@ -9,7 +9,7 @@ export const state = () => ({
   isDesktop: false,
   isTablet: false,
   isMobile: true,
-  repositoryUrl: 'https://github.com/t--takai/VueBoilerplate',
+  repositoryUrl: 'https://github.com/t--takai/59-split-layout',
   author: {
     name: 'Tomonari Takai',
     position: 'UI Designer / Front-end Engineer',
@@ -17,7 +17,7 @@ export const state = () => ({
   },
   sitemap: [
     {
-      name: 'HOME',
+      name: 'TOP',
       path: '/',
     },
     {
