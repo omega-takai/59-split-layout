@@ -6,12 +6,14 @@
       v-text="val"
       :class="$style.item"
     )
-    div(:class="$style.hr")
-    div(:class="$style.wrapper")
-      section(:class="[$style.section2col, $style.height7]")
-        div(:class="[$style.split2, $style.height7]" v-text="'split2'")
-        div(:class="[$style.split2, $style.height3]" v-text="'split2'")
-        div(:class="[$style.split2, $style.height3]" v-text="'split2'")
+
+    section(:class="[$style.grid2col, $style.wrapper]")
+      div(
+        :class="$style.gridItem"
+        v-for="val in 3"
+        v-text="'split2'"
+        :key="'grid-item-' + val"
+      )
 </template>
 
 <script>
@@ -46,6 +48,8 @@ $_outerPadding: 15px
   display: flex
   flex-wrap: wrap
   width: 100%
+  margin:
+    top: $_outerPadding
   max-width: $_width
   padding: $_outerPadding
   box-sizing: content-box
@@ -60,25 +64,27 @@ $_outerPadding: 15px
     &:nth-of-type(odd)
       background-color: colors('inverted')
 
-  .hr
-    flex: 0 0 auto
-    width: $_width
-    height: $_itemSize
-    background-color: colors('white')
-
   .wrapper
     flex: 1 1 100%
 
-.section2col
-  display: flex
-  flex-flow: column wrap
-  justify-content: space-between
-  align-content: space-between
-  width: 100%
+.grid2col
+  margin: $_itemSize 0
+  display: grid
+  gap: $_itemSize
+  grid-template:
+    areas: 'first second' 'first third'
+    columns: 1fr 1fr
+    rows: ($_itemSize * 3) ($_itemSize * 3)
 
-  .split2
-    @include _itemStyle()
-    width: ($_width - $_itemSize) / 2
+  .gridItem
     padding: $_itemSize
+    color: colors('white')
+    line-height: 1
     background-color: colors('fontSub')
+    &:nth-of-type(1)
+      grid-area: first
+    &:nth-of-type(2)
+      grid-area: second
+    &:nth-of-type(3)
+      grid-area: third
 </style>
