@@ -28,7 +28,7 @@
     "modern-css-reset": "1.1.0",
     "nuxt": "2.11.0",
     "vue-feather-icons": "5.0.0",
-    "vue-styled-components": "1.4.14"
+    "vue-styled-components": "1.5.1"
   },
   "devDependencies": {
     "@babel/core": "7.9.6",
